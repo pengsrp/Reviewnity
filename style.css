@@ -1,0 +1,91 @@
+body {
+    background: #666;
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+
+/* Clearfix (clear floats) */
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#nav {
+    background: #0D47A1;
+    color: white;
+    text-align: left;
+}
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+p {
+    margin: .5em;
+}
+
+.page {
+    padding: 1em;
+}
+
+textarea {
+    width: 100%;
+    border-radius: .3em;
+    font-size: 1rem;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+button {
+    background: #1565C0;
+    border-radius: .5em;
+    font-size: 1rem;
+    color: white;
+    width: 100%;
+    padding: .5em;
+    box-sizing: border-box;
+    border: none;
+    text-align: center;
+}
+
+#page-how2ting,
+#page-addcomment {
+    display: none;
+}
+
+.back {
+    padding: .5em;
+    width: 33%;
+}
+
+.add {
+    padding: .5em;
+    width: 50%;
+}
+
+.top {
+    text-align: right;
+}
+
+.sign {
+    width: 50%;
+    align: center;
+    margin: auto;
+    display: block;
+}

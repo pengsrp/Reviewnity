@@ -1,0 +1,117 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Reviewnity - ฮาวทูทิ้ง</title>
+    <style>
+        #page-addcomment {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Reviewnity</a>
+        <!-- <a class="navbar-brand" href="#">Login</a> -->
+    </nav>
+    <div id="page-how2ting" class="container">
+        <h1><span class="badge badge-dark">ฮาวทูทิ้ง</span></h1>
+        <img src="https://scontent.fbkk5-1.fna.fbcdn.net/v/t1.0-9/78329514_123032925820810_4130647550971609088_n.jpg?_nc_cat=109&_nc_sid=e3f864&_nc_ohc=RxkD_fiD5CYAX8BRZq1&_nc_ht=scontent.fbkk5-1.fna&oh=df198809127b9c16f2dc6816f21279ca&oe=5EA3C76E" alt="how2tingwpp"
+            class="img-fluid" style="width:100%">
+        <p class="text-justify" style="color: #fff;">ฮาวทูทิ้ง.. ทิ้งอย่างไรไม่ให้เหลือเธอ ว่าด้วยเรื่องราวของจีน (ออกแบบ-ชุติมณฑน์ จึงเจริญสุขยิ่ง) ที่ต้องการจะเคลียร์บ้านเพื่อรีโนเวต มหกรรมการโละของออกจากบ้านจึงเกิดขึ้น อะไรที่ไม่ใช้แล้ว อะไรที่ทิ้งไว้ก็รก เธอตัดสินใจจะทิ้งให้หมดเลยแต่เมื่อเธอได้เจอกับของบางอย่างที่เป็นของเอ็ม
+            แฟนเก่า (ซันนี่ สุวรรณเมธานนท์) จีนจึงเริ่มพบว่าการทิ้งครั้งนี้ไม่ง่ายเพราะของบางอย่างแม้จะไม่มีประโยชน์แล้วแต่มันยังมีเรื่องราวให้นึกถึง มีอดีตที่ยังค้างคา มีความรู้สึกบางอย่างที่ไม่สามารถแค่ทิ้งลงถุงดำแล้วหายไป จีนจึงต้องตัดสินใจว่าจะทําอย่างไรกับสิ่งของของเอ็ม
+            เธอจะทิ้งไป เก็บไว้ หรือเดินไปคืน ถึงจะเป็นการทิ้งที่สมบูรณ์ที่สุด</p>
+        <!-- Table -->
+        <div class="row m-1">
+            <table class="table table-dark" id="table-data">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Review</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="row mt-1">
+            <div class="col">
+            </div>
+            <div class="col">
+                <a class="btn btn-primary" href="../index.html" role="button">Back</a>
+            </div>
+            <div class="col">
+                <a class="btn btn-primary" href="#" role="button" onclick="mockupClick('page-how2ting','page-addcomment')">Add Review</a>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- add review-->
+    <div id="page-addcomment" class="container">
+        <h1><span class="badge badge-dark">ฮาวทูทิ้ง</span></h1>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1" style="color: #fff;">Name</label>
+            <textarea type="text" class="form-control" rows="1" id="nameField"></textarea>
+            <label for="exampleFormControlTextarea1" style="color: #fff;">Review</label>
+            <textarea type="text" class="form-control" rows="3" id="commentField"></textarea>
+        </div>
+        <div class="row mt-1 mb-1">
+            <div class="col">
+            </div>
+            <div class="col">
+                <a class="btn btn-primary" style="color: #fff;" role="button" onclick="mockupClick('page-addcomment','page-how2ting')">Back</a>
+            </div>
+            <div class="col">
+                <a class="btn btn-primary" style="color: #fff;" role="button" onclick="addreview()">Add Review</a>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
+    <!-- script -->
+    <script type="text/javascript">
+        function addreview() {
+            mockupClick('page-addcomment', 'page-how2ting');
+            addRow('table-data');
+        }
+
+        function mockupClick(pageToHide, pageToShow) {
+            document.querySelector('#' + pageToHide).style.display = "none";
+            document.querySelector('#' + pageToShow).style.display = "block";
+        }
+
+
+        var nameArray = [];
+
+        function addRow(tableID) {
+            // Get a reference to the table
+            let tableRef = document.getElementById(tableID);
+
+            // Insert a row at the end of the table
+            let newRow = tableRef.insertRow(-1);
+
+            // Insert a cell in the row at index 0
+            let newCell = newRow.insertCell(0);
+            let newCell2 = newRow.insertCell(1);
+            // Append a text node to the cell
+            newCell.innerHTML = document.getElementById('nameField').value;
+            newCell2.innerHTML = document.getElementById('commentField').value;
+            nameArray.push(document.getElementById('nameField').value);
+            let newText = document.getElementById('nameField').value;
+            let newText2 = document.getElementById('commentField').value;
+            console.log(nameArray);
+        }
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Reviewnity - Sonic</title>
+    <style>
+        #page-addcomment {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Reviewnity</a>
+        <!-- <a class="navbar-brand" href="#">Login</a> -->
+    </nav>
+    <div id="page-sonic" class="container">
+        <h1><span class="badge badge-dark">Sonic</span></h1>
+        <img src="https://images.hdqwalls.com/wallpapers/sonic-the-hedgehog-2020-movie-9u.jpg" alt="sonicwpp" class="img-fluid" style="width:100%">
+        <p class="text-justify" style="color: #fff;">เรื่องราวของเม่นที่ว่องไวที่สุดในโลก เมื่อเขามาเยือนบ้านใหม่บนโลก ในภาพยนตร์ตลกแอ็คชั่นที่ใช้คนแสดง โซนิคและเพื่อนรักคนใหม่ของเขาอย่าง ทอม (เจมส์ มาร์สเดน) ต้องร่วมมือกันเพื่อปกป้องโลกให้พ้นจากอัจฉริยะผู้ชั่วร้าย ดร.โรบ็อทนิก (จิม แคร์รี่) และแผนการที่หวังจะครองโลกของเขา</p>
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col">
+                <a class="btn btn-primary" href="../index.html" role="button">Back</a>
+            </div>
+            <div class="col">
+                <a class="btn btn-primary" href="#" role="button" onclick="mockupClick('page-sonic','page-addcomment')">Add Review</a>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
+
+    <!-- add review-->
+    <div id="page-addcomment" class="container">
+        <h1><span class="badge badge-dark">Sonic</span></h1>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1" style="color: #fff;">รีวิว</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col">
+                <a class="btn btn-primary" role="button" onclick="mockupClick('page-addcomment','page-sonic')">Back</a>
+            </div>
+            <div class="col">
+                <a class="btn btn-primary" role="button" onclick="mockupClick('page-addcomment','page-sonic')">Add Review</a>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
+    <!-- script -->
+    <script type="text/javascript">
+        function mockupClick(pageToHide, pageToShow) {
+            document.querySelector('#' + pageToHide).style.display = "none";
+            document.querySelector('#' + pageToShow).style.display = "block";
+        }
+    </script>
+</body>
+
+
+</html>
